@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* font-family: 'Poppins', sans-serif;*/
+
+
+/* CONFIGURAÇÕES PADRÃO */
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+#fundo-falso {
+    height: 90px;
+    width: 100%;
+    width: white;
+}
+
+#principal-header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#principal-header #logo {
+    width: 80px;
+}
+
+#principal-header #frase-two {
+    width: 50px;
+    height: 50px;
+}
+
+#principal-header #menu {
+    cursor: pointer;
+    user-select: none;
+}
+
+#options {
+    display: none;
+    background-color: rgb(245, 241, 241);
+    animation: para-baixo 0.2s;
+}
+
+#options ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#options a {
+    color: black;
+}
+
+#options a:hover {
+    text-decoration: underline;
+}
+
+header hr {
+    border: none;
+    height: 5px;
+    background-color: red;
+    z-index: 1;
+}
+
+#slider {
+    position: relative;
+}
+
+#slider img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 86vh;
+    object-fit: cover;
+    transition: opacity 800ms;
+}
+
+#slider img.selected {
+    opacity: 1;
+}
+
+/*MEDIA QUERIE PARA QUANDO ESTIVER EM PC*/
+@media (min-width:600px) {
+
+    #principal-header #frase-two {
+        width: 300px;
+        height: 30px;
+    } 
+
+}
+
+/*MEDIA QUERIE PARA QUANDO ESTIVER EM CELULAR*/
+@media (max-width:600px) {
+
+    #options {
+        display: none;
+        background-color: rgb(245, 241, 241);
+        animation: para-baixo 1s;
+    }
+    
+    #options ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 50px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    #options a {
+        color: black;
+    }
+
+    
+}
+
+@keyframes para-baixo {
+    0% {
+        transform: translateY(-7px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
